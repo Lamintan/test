@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+body{
+    background: #000;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 50px;
+    animation:  fade-down 1s;
+    z-index: 100000;
+    color: #fff;
+}
+
+nav.sticky{
+    padding: 5px 80px;    
+    background: #fff;
+    color: #000;
+}
+nav .logo {
+    position: relative;
+    width: 50px; 
+    height: 50px; 
+    background-image: url('images/5logo_white.png'); 
+    background-size: cover;
+    text-indent: -9999px;
+    transition: 0.6s;
+}
+
+nav.sticky .logo {
+    background-image: url('images/5logo_black.png'); 
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.image3{
+    width: 600px;
+    height: 350px;
+    margin-left: 20px;
+    object-fit: cover;
+    transition: 0.6s;
+    animation:  fade-up 1s;
+}
+
+.container1{
+   padding: 50px 0px; 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.row{
+    padding: 100px;
+    display: flex;
+    flex-direction:row;
+    align-items: start;
+ 
+ }
+
+ .iconrow{
+    margin-top: 20px;
+    display: flex;
+    flex-direction:row;
+    align-items: start;
+ 
+ }
+
+ .sicon{
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+ }
+
+
+ .column p {
+    color: rgba(255,255,255,0.6);
+ }
+
+ .btnstart {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 80px;
+    font-size: 16px;
+    text-align: left; 
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid white; 
+    color: white;
+    background-color: transparent; 
+    transition: background-color 0.3s, color 0.3s; 
+    animation:  fade-down 1s;
+  }
+
+  .btnstart:hover {
+    background-color: white; 
+    color: black; 
+  }
+
+  /* Contacts */
+  .cntner{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    isolation: isolate;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cntner::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-size: cover;
+    background-image: url(images/build.jpg);
+    opacity: .5;
+}
+
+.cnt-glassy{
+    color: #fff;
+    margin: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .contact{
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+  }
+
+  .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    font-size: 22px;
+  }
+  .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+  }
+
+  .contactForm{
+    width: 500px;
+    padding: 10px 0;
+    margin-left: 10px;
+  }
+  .contactForm h2{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+
+  }
+
+  .contactForm .inputBox input, 
+  .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    resize: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+  }
+
+  .contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #dadada;
+  } 
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span{
+    color:white;
+    font-size: 12px;
+    transform: translateY(-20px);
+  }
+
+  .contactForm .inputBox input[type="submit"] {
+        width: 100px;
+        background-color: transparent;
+        transition: 0.6s;
+        color: white;
+        border: 1px solid white; 
+        cursor: pointer;
+  }
+  .contactForm .inputBox input[type="submit"]:hover{
+    width: 100px;
+    background-color: white;
+    transition: 0.6s;
+    color: black;
+    border: 1px solid white; 
+    cursor: pointer;
+}
+
+  
+@keyframes anim{
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 88%;
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.card{
+    width: 370px;
+    height: 400px;
+    background-color: #111111;
+    padding: 3% 8%;
+    border: 0.2px solid rgba(114, 226, 174, 0.2);
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after{
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: #fff;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.card:hover::after{
+    width: 225%;
+    top: -100%;
+}
+
+.card i{
+    color: rgb(0, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+.card h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.card p{
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: rgba(225, 225, 225, 0.6);
+
+}
+.card:hover{
+    background-color: transparent;
+    transform: translateY(-8px);
+    border-color: #00ff37;
+
+}
+
+.card:hover i{
+    color: #00ff37;
+
+}
+.card:hover .btn{
+    background-color: #00ff37;
+    color: black;
+    cursor: pointer;
+}
+
+.service-wrapper{
+    padding: 5% 8%;
+}
+
+.btn{
+    padding: 10px 50px;
+    background-color: transparent;
+    color: transparent;
+    text-decoration: none;
+
+    transition: background-color 0.3s, color 0.3s; 
+    
+}
+.banner4{
+    padding: 50px 200px;
+    color: white;
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.banner4  div {
+    display: flex;
+    align-items: center;
+}
+.logo2{
+    width: 50px;
+    height: 50px;
+}
+div ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div ul li{ 
+    position: relative;
+    list-style: none;
+}
+
+div ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: 0.6s;
+}
+
+div ul li a:hover{
+    color: rgb(138, 138, 138);
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.more{
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.6s;
+}
+.more:hover{
+    color: rgb(138, 138, 138);    
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }   
+    .contact{
+        padding: 20px 40px;
+        display: flex;
+        flex-direction: column;
+      }
+}
+@media screen and (max-width:900px) {
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }   
+    h1{
+        font-size: 3.5rem;
+    }
+}
+
+@keyframes fade-up{
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        transition: ease-in-out;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        transition: ease-in-out;
+    }
+}
+
+@keyframes fade-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+        transition: ease-in-out;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        transition: ease-in-out;
+    }
+}
